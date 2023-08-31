@@ -5,7 +5,7 @@ bmi = weight / (height * height)
 function getBmi (weight, height) {
     const bmi = bmiCalculate(weight, height);
     alert("Your BMI is " + bmi);
-  } //calls functions that contains bmi calclation formula and outputs the BMI  as an alert
+  } //calls function that contains bmi calculation formula and outputs the BMI  as an alert
 
   
 function bmiCalculate (weight, height) {
