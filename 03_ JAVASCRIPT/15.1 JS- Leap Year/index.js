@@ -10,4 +10,4 @@ function isLeapYr (year) {
     }      
 } //Checks whether a given year is leap or not
     
-isLeapYr(prompt("Enter the year")); 
+isLeapYr(prompt("Enter the year"));

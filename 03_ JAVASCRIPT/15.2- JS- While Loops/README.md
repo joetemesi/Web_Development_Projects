@@ -1,0 +1,1 @@
+Practicing JavaScript While loop with the 99 bottles of beer song lyrics.
