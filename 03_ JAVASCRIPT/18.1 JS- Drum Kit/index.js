@@ -5,5 +5,5 @@ for (var i = 0; i < drumClicks.length; i++) {
 }
 
 function buttonClick() {
-    alert("bazuuu");
+    alert("Key Press");
 }
