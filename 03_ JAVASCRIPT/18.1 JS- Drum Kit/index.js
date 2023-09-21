@@ -1,9 +1,8 @@
 var drumClicks = document.querySelectorAll(".drum");
 
 for (var i = 0; i < drumClicks.length; i++) {
-    drumClicks[i].addEventListener("click", buttonClick);
+    drumClicks[i].addEventListener("click", function () {
+        alert("Key Press");
+    });
 }
 
-function buttonClick() {
-    alert("Key Press");
-}
