@@ -5,6 +5,7 @@ for (var i = 0; i < drumClicks.length; i++) {
         //alert("Key Press.");
         var sound1 = new Audio ("sounds/tom-1.mp3");
         sound1.play();
+        this.style.color = "white";
     });
 }
 
