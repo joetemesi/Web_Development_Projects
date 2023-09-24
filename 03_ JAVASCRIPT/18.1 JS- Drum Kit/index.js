@@ -1,4 +1,4 @@
-var drumClicks = document.querySelectorAll(".drum");c// button click event listener.
+var drumClicks = document.querySelectorAll(".drum");// button click event listener.
 
 for (var i = 0; i < drumClicks.length; i++) {
     drumClicks[i].addEventListener("click", function test () {
