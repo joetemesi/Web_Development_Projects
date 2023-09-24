@@ -15,11 +15,14 @@ function mouseClick() { // button click event listener.
 
 mouseClick();
 
- document.addEventListener("keypress", function (event) { ///keyboard press event listeners
-    var keyPress2 = event.key;
-    makeSound(keyPress2);
-    })
+function keyboardPress () {
+    document.addEventListener("keypress", function (event) { ///keyboard press event listeners
+        var keyPress2 = event.key;
+        makeSound(keyPress2);
+        })
+}
 
+keyboardPress();
 
 function makeSound (key) { ///Drum kit sounds
     switch (key) {
