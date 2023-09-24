@@ -1,7 +1,7 @@
 var drumClicks = document.querySelectorAll(".drum");
 
 for (var i = 0; i < drumClicks.length; i++) {
-    drumClicks[i].addEventListener("click", function () {
+    drumClicks[i].addEventListener("click", function test () {
         //alert("Key Press.");
         /*var sound1 = new Audio ("sounds/tom-1.mp3");
         sound1.play();
@@ -39,3 +39,13 @@ for (var i = 0; i < drumClicks.length; i++) {
     });
 }
 
+function testKey () {
+    document.addEventListener("keypress", function(event) {
+        var keyPress1 = event.key;
+        if (keyPress1 = "w"){
+            alert("test");
+        }
+    })
+}
+
+testKey();
