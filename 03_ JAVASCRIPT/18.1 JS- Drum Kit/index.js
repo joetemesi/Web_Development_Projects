@@ -1,6 +1,6 @@
-var drumClicks = document.querySelectorAll(".drum");// button click event listener.
-
-for (var i = 0; i < drumClicks.length; i++) {
+function mouseClick() { // button click event listener.
+    var drumClicks = document.querySelectorAll(".drum");
+    for (var i = 0; i < drumClicks.length; i++) {
     drumClicks[i].addEventListener("click", function test () {
         //alert("Key Press.");
         /*var sound1 = new Audio ("sounds/tom-1.mp3");
@@ -11,6 +11,9 @@ for (var i = 0; i < drumClicks.length; i++) {
     })
 } 
 
+}
+
+mouseClick();
 
  document.addEventListener("keypress", function (event) { ///keyboard press event listeners
     var keyPress2 = event.key;
