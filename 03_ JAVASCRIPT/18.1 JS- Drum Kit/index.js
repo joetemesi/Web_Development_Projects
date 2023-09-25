@@ -18,7 +18,7 @@ mouseClick();
 
 function keyboardPress () {
     document.addEventListener("keypress", function (event) { ///keyboard press event listeners
-        var keyPress2 = event.key.toLowerCase();
+        var keyPress2 = event.key.toLowerCase(); 
         makeSound(keyPress2);
         animationButton(keyPress2);
         })
