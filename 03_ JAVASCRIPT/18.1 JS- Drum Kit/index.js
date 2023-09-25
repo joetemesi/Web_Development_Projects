@@ -8,6 +8,7 @@ function mouseClick() { // button click event listener.
         this.style.color = "white";*/
         var buttonInnerHtml1 = this.innerHTML;
         makeSound(buttonInnerHtml1);
+        animationButton(buttonInnerHtml1);
     })
 } 
 
@@ -19,6 +20,7 @@ function keyboardPress () {
     document.addEventListener("keypress", function (event) { ///keyboard press event listeners
         var keyPress2 = event.key;
         makeSound(keyPress2);
+        animationButton(keyPress2);
         })
 }
 
@@ -58,4 +60,13 @@ function makeSound (key) { ///Drum kit sounds
         default: console.log(buttonInnerHtml1);
             break;
     }
+ }
+
+ function animationButton (pressedKey) {
+    var pressedKeyButton = document.querySelector("." + pressedKey);
+    pressedKeyButton.classList.add("pressed");
+
+    setTimeout(function () {
+        pressedKeyButton.classList.remove("pressed"); 
+    }, 100);
  }
