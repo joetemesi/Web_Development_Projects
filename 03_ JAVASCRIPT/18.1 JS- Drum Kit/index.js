@@ -26,7 +26,7 @@ function keyboardPress () {
 
 keyboardPress();
 
-function makeSound (key) { ///Drum kit sounds
+function makeSound (key) { ///Drum kit sounds function
     switch (key) {
         case "w":
             var tom1 = new Audio ("sounds/tom-1.mp3");
@@ -62,7 +62,7 @@ function makeSound (key) { ///Drum kit sounds
     }
  }
 
- function animationButton (pressedKey) {
+ function animationButton (pressedKey) { //Animation function
     var pressedKeyButton = document.querySelector("." + pressedKey);
     pressedKeyButton.classList.add("pressed");
 
