@@ -3,9 +3,12 @@ function mouseClick() { // button click event listener.
     for (var i = 0; i < drumClicks.length; i++) {
     drumClicks[i].addEventListener("click", function test () {
 
-        var buttonInnerHtml1 = this.innerHTML;
+        makeSound(this.innerHTML);
+        animationButton(this.innerHTML);
+        
+        /*var buttonInnerHtml1 = this.innerHTML;
         makeSound(buttonInnerHtml1);
-        animationButton(buttonInnerHtml1);
+        animationButton(buttonInnerHtml1);*/
     })
 } 
 
