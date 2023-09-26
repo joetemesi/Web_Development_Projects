@@ -5,25 +5,28 @@ function mouseClick() { // button click event listener.
 
         makeSound(this.innerHTML);
         animationButton(this.innerHTML);
-        
-        /*var buttonInnerHtml1 = this.innerHTML;
-        makeSound(buttonInnerHtml1);
-        animationButton(buttonInnerHtml1);*/
     })
 } 
 
 }
 
+        /*var buttonInnerHtml1 = this.innerHTML;
+        makeSound(buttonInnerHtml1);
+        animationButton(buttonInnerHtml1);*/
+
 mouseClick();
 
 function keyboardPress () {
     document.addEventListener("keypress", function (event) { ///keyboard press event listeners
-        var keyPress2 = event.key.toLowerCase(); 
-        makeSound(keyPress2);
-        animationButton(keyPress2);
-        })
-}
 
+        makeSound(event.key.toLowerCase());
+        animationButton(event.key.toLowerCase());
+    })
+}
+        /*var keyPress2 = event.key.toLowerCase(); 
+        makeSound(keyPress2);
+        animationButton(keyPress2); */
+        
 keyboardPress();
 
 function makeSound (key) { ///Drum kit sounds function
