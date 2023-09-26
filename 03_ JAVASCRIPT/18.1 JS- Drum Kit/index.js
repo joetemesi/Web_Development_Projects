@@ -2,10 +2,7 @@ function mouseClick() { // button click event listener.
     var drumClicks = document.querySelectorAll(".drum");
     for (var i = 0; i < drumClicks.length; i++) {
     drumClicks[i].addEventListener("click", function test () {
-        //alert("Key Press.");
-        /*var sound1 = new Audio ("sounds/tom-1.mp3");
-        sound1.play();
-        this.style.color = "white";*/
+
         var buttonInnerHtml1 = this.innerHTML;
         makeSound(buttonInnerHtml1);
         animationButton(buttonInnerHtml1);
