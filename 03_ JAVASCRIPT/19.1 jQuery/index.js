@@ -3,6 +3,11 @@
 
 })*/
 
-/*$("h1").css("color","green");*/
+/*$("h1").css("color","green");*/ //add css property
 
-$("h1").addClass("testH1");
+$("h1").addClass("testH1"); //Added class to html element
+
+
+$("h1").hasClass("testH1"); //METHOD TO CHECK WHETHER ELEMENT HAS the class
+
+$("h1").text("TEMESI"); //Modify text
