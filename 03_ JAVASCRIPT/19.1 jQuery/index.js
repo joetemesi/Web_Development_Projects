@@ -15,3 +15,7 @@ $("h1").text("TEMESI"); //Modify text
 // $("img").attr("src")
 
 $("a").attr("href","https://www.google.com");
+
+$("h1").click(function(){
+    $("h1").css("color","red");
+})
