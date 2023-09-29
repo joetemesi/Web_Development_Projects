@@ -16,6 +16,10 @@ $("h1").text("TEMESI"); //Modify text
 
 $("a").attr("href","https://www.google.com");
 
-$("h1").click(function(){
+$("h1").click(function(){ //jQuery click event listener
     $("h1").css("color","red");
+})
+
+$("button").click(function(){
+    $("h1").css("color","purple");
 })
