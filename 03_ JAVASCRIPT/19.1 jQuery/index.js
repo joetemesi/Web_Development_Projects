@@ -1,11 +1,11 @@
-/*$(document).ready(function(){  //check whether jquery lib is ready with callback function
+ /*$(document).ready(function(){  //check whether jquery lib is ready with callback function
     $("h1").css("color","red");
 
 })*/
 
 /*$("h1").css("color","green");*/ //add css property
 
-$("h1").addClass("testH1"); //Added class to html element
+/*$("h1").addClass("testH1"); //Added class to html element
 
 
 $("h1").hasClass("testH1"); //METHOD TO CHECK WHETHER ELEMENT HAS the class
@@ -25,6 +25,10 @@ $("button").click(function(){
 });
 
 
-$("input").keypress(function(event){
+$("input").keypress(function(event){ //keypress event listener
     console.log(event.key);
+}); */
+
+$(document).keypress(function(event){
+    $("h1").text(event.key);
 });
