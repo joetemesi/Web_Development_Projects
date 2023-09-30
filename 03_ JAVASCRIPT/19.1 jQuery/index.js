@@ -22,4 +22,9 @@ $("h1").click(function(){ //jQuery click event listener
 
 $("button").click(function(){
     $("h1").css("color","purple");
-})
+});
+
+
+$("input").keypress(function(event){
+    console.log(event.key);
+});
