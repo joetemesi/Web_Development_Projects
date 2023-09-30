@@ -29,6 +29,10 @@ $("input").keypress(function(event){ //keypress event listener
     console.log(event.key);
 }); */
 
-$(document).keypress(function(event){
+/*$(document).keypress(function(event){ ///DOM MANIPULATION
     $("h1").text(event.key);
+});*/
+
+$("h1").on("mouseover", function(){
+    $("h1").text("just got hoved")
 });
