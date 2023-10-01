@@ -38,6 +38,18 @@ $("input").keypress(function(event){ //keypress event listener
 });*/
 
 
-$("button").on("click",function(){
+/*$("button").on("click",function(){
     $("h1").toggle()
-})
+})*/
+
+/*$("button").on("click",function(){
+    $("h1").fadeOut()
+})*/
+
+/*$("button").on("click",function(){
+    $("h1").slideToggle()
+})*/
+
+$("button").on("click",function(){
+    $("h1").slideUp().slideDown().animate({opacity:"20%"})
+});
