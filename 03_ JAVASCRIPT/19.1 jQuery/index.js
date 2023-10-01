@@ -33,6 +33,11 @@ $("input").keypress(function(event){ //keypress event listener
     $("h1").text(event.key);
 });*/
 
-$("h1").on("mouseover", function(){
+/*$("h1").on("mouseover", function(){
     $("h1").text("just got hoved")
-});
+});*/
+
+
+$("button").on("click",function(){
+    $("h1").hide()
+})
