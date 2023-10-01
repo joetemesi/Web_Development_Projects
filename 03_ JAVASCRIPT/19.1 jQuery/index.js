@@ -39,5 +39,5 @@ $("input").keypress(function(event){ //keypress event listener
 
 
 $("button").on("click",function(){
-    $("h1").hide()
+    $("h1").toggle()
 })
