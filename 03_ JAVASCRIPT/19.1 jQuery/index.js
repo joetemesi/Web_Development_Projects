@@ -50,6 +50,6 @@ $("input").keypress(function(event){ //keypress event listener
     $("h1").slideToggle()
 })*/
 
-$("button").on("click",function(){
+$("button").on("click",function(){ //jQuery animation
     $("h1").slideUp().slideDown().animate({opacity:"20%"})
 });
