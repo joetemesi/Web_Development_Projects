@@ -20,6 +20,6 @@ $("h1").click(function(){ //jQuery click event listener
     $("h1").css("color","red");
 })
 
-$("button").click(function(){
+$("button").click(function(){ 
     $("h1").css("color","purple");
 })
