@@ -1,6 +1,9 @@
 //jshint esversion:6
 
-const fs = require("fs");
+var superheroes = require("superheroes"); 
+var testSuperHero = superheroes.random();
+console.log(testSuperHero);
+//const fs = require("fs");
 
 // fs.copyFile("game.js", "backupgame.js", (err) => {
 //     if (err) {
@@ -10,4 +13,4 @@ const fs = require("fs");
 //     }
 //   }); //method 1
 
-fs.copyFileSync("game.js","backupgame.js"); /// method 2
+//fs.copyFileSync("game.js","backupgame.js"); /// method 2
