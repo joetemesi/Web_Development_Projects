@@ -2,9 +2,21 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", function(req, res){
-    console.log(req);
-    res.send("Hello World!!!!");
+app.get("/", function (req, res) {
+    res.send(`
+        <h1>Calculator</h1>
+        <form action="/calculate" method="post">
+            <!-- First Input Field -->
+            <input type="text" id="number1" name="number1" required placeholder="First Number Here">
+            
+            <!-- Second Input Field -->
+            <input type="text" id="number2" name="number2" required placeholder="Second Number Here"> </br>
+
+            <!-- Calculate Button -->
+            <input type="submit" value="Calculate">
+        </form>
+    `);
+      
 })
 
 app.listen(3000, function(){
