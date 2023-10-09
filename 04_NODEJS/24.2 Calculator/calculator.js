@@ -12,8 +12,11 @@ app.get("/", function (req, res) {
             <!-- First Input Field -->
             <input type="text" id="number1" name="number1" required placeholder="First Number Here">
             
+            <!-- Operator Input Field -->
+            <input type="text" id="operator" name="operator" required placeholder=" Enter Operator Here">
+
             <!-- Second Input Field -->
-            <input type="text" id="number2" name="number2" required placeholder="Second Number Here"> </br> </br>
+            <input type="text" id="number2" name="number2" required placeholder=" Enter Operator Here">  </br> </br>
 
             <!-- Calculate Button -->
             <input type="submit" value="Calculate">
@@ -26,8 +29,22 @@ app.post("/calculate", function(req, res){
 
     var firstNumber = parseFloat(req.body.number1); // Convert to a numeric type
     var secondNumber = parseFloat(req.body.number2);
+    var operator = req.body.operator;
+    console.log(`Operator entered: '${operator}'`); 
 
-    result = firstNumber + secondNumber;
+    if (operator == '+'){
+        result = firstNumber + secondNumber;
+    } else if (operator == '-') {
+        result = firstNumber - secondNumber;
+    } else if (operator == '*'){
+        result = firstNumber * secondNumber;
+    } else if (operator == '/'){
+        result = firstNumber / secondNumber;
+    } else {
+        // Handle invalid operator here (e.g., display an error message)
+        res.send("Invalid operator. Please use '+' or '-'");
+        return; // Exit the function to avoid further processing
+    }
 
     res.send(`The sum of the two numbers is: ${result}`); //interpolating stings using ``
 })
