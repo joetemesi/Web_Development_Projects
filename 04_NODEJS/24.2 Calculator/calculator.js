@@ -22,6 +22,16 @@ app.get("/", function (req, res) {
       
 })
 
+app.post("/calculate", function(req, res){
+
+    var firstNumber = parseFloat(req.body.number1); // Convert to a numeric type
+    var secondNumber = parseFloat(req.body.number2);
+
+    result = firstNumber + secondNumber;
+
+    res.send(`The sum of the two numbers is: ${result}`); //interpolating stings using ``
+})
+
 app.listen(3000, function(){
     console.log("Server started on port: 3000");
 })
