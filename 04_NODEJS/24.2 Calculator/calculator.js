@@ -10,7 +10,7 @@ app.get("/", function (req, res) {
             <input type="text" id="number1" name="number1" required placeholder="First Number Here">
             
             <!-- Second Input Field -->
-            <input type="text" id="number2" name="number2" required placeholder="Second Number Here"> </br>
+            <input type="text" id="number2" name="number2" required placeholder="Second Number Here"> </br> </br>
 
             <!-- Calculate Button -->
             <input type="submit" value="Calculate">
