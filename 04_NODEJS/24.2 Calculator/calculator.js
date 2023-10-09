@@ -1,6 +1,9 @@
 const express = require("express");
+const bodyParser = require("body-parser");  // Import body-parser
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false })); // Handle the POST request to process the form data
 
 app.get("/", function (req, res) {
     res.send(`
