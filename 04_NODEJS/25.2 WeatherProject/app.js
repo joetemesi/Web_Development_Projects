@@ -8,7 +8,7 @@ const https = require("https");
 
 
 app.get("/", function(req, res){
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=melbourne&units=metric&appid=5ad247cde900dd2152841f32aae8ba46"
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=melbourne&units=metric&appid="
 
     https.get(url, function(response) {
         // console.log(response);
