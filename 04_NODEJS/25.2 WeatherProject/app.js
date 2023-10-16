@@ -8,7 +8,7 @@ const https = require("https");
 
 
 app.get("/", function(req, res){
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=melbourne&units=metric&appid="
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=kAKAMEGA&units=metric&appid="
 
     https.get(url, function(response) {
         // console.log(response);
@@ -18,15 +18,22 @@ app.get("/", function(req, res){
             const weatherData = JSON.parse(data);
             const temp = weatherData.main.temp;
             const description = weatherData.weather[0].description
+            const city = weatherData.name;
+            const country = weatherData.sys.country;
+    
 
             console.log(description);
             console.log(temp);
             // console.log(weatherData);
+            res.send(`
+            <h1>The temperature of ${city} in ${country} is ${temp} °C</h1>
+            <h2>The weather is currently ${description}</h2>
+            `);
         })
     })
     
 
-    res.send("Welcome to my weather app");
+    
 })
 
 
