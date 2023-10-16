@@ -8,11 +8,23 @@ const https = require("https");
 
 
 app.get("/", function(req, res){
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=nairobi&appid=5ad247cde900dd2152841f32aae8ba46&units=metric"
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=melbourne&units=metric&appid=5ad247cde900dd2152841f32aae8ba46"
 
     https.get(url, function(response) {
-        console.log(response);
+        // console.log(response);
+        console.log(response.statusCode);
+
+        response.on("data", function(data){
+            const weatherData = JSON.parse(data);
+            const temp = weatherData.main.temp;
+            const description = weatherData.weather[0].description
+
+            console.log(description);
+            console.log(temp);
+            // console.log(weatherData);
+        })
     })
+    
 
     res.send("Welcome to my weather app");
 })
