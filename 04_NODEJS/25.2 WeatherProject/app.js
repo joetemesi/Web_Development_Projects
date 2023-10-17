@@ -25,10 +25,14 @@ app.get("/", function(req, res){
             console.log(description);
             console.log(temp);
             // console.log(weatherData);
-            res.send(`
-            <h1>The temperature of ${city} in ${country} is ${temp} °C</h1>
-            <h2>The weather is currently ${description}</h2>
-            `);
+            // res.send(`
+            // <h1>The temperature of ${city} in ${country} is ${temp} °C</h1>
+            // <h2>The weather is currently ${description}</h2>
+            // `);
+
+            res.write(`<p>The weather is currently ${description}</p>`);
+            res.write(`<h1>The temperature of ${city} in ${country} is ${temp} ° C </h1>`);
+            res.send();
         })
     })
     
