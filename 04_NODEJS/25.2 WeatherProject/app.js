@@ -38,8 +38,8 @@ app.post("/response", function(req, res){
 
     
 
-            console.log(description);
-            console.log(temp);
+            // console.log(description);
+            // console.log(temp);
             console.log(statusCode);
             // console.log(weatherData);
             // res.send(`
