@@ -1,0 +1,1 @@
+## A Node.js Script that connects to MongoDB and creates a fruits db if it does not exists and inserts collections and data to it.
