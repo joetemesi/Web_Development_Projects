@@ -1,20 +1,33 @@
-const mongoose = require("mongoose"); //import module
+const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/fruitsDB"); //create fruitsDB if not existing and connect to it
+mongoose.connect("mongodb://localhost:27017/fruitsDB");
+
 
 const fruitSchema = new mongoose.Schema({
     name: String,
     rating: Number,
     review: String
-}); //define new schema
+});
 
-const Fruit = mongoose.model("Fruit", fruitSchema); //new fruits mongoDB collection
+const Fruit = mongoose.model("Fruit", fruitSchema);
 
 const fruit = new Fruit({
-    name:"Banana",
+    name: "Apple",
     rating: 8,
-    review: "Yummy"
-}); //insert new entry to collection
+    review: "sawaaa"
+});
 
-fruit.save(); //save to fruits collection
+fruit.save()
+  .then(() => {
+     console.log("Successfully saved the fruit to the database.");
+
+     // Find and display all entries in the 'fruits' collection
+     return Fruit.find().exec();
+  })
+  .then((fruits) => {
+     console.log("All fruits in the collection:", fruits);
+  })
+  .catch((err) => {
+     console.error("Error saving or finding fruits:", err);
+  });
 
