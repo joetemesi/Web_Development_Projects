@@ -15,7 +15,13 @@ const fruit = new Fruit({
     name: "Apple",
     rating: 8,
     review: "sawaaa"
-});
+},
+{
+   name: "banana",
+   rating: 9,
+   review: "poa"
+}
+);
 
 fruit.save()
   .then(() => {
